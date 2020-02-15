@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Weather API</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // Example queryURL for Giphy API
+        //   var queryURL = "api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid="+APIKey;
+        // first Ajax call to get the weather data
+
+        var state = "us";
+        var cityName = "new york";
+        var API_Key = "396525f46320f8dae3e9e436c82e1c67";
+
+        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "," + state + "&appid=" + API_Key + "&units=imperial";
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+            var date = new Date().toLocaleDateString();
+            console.log("date:", date);
+            var temperature = response.main.temp;
+            console.log("temp:", temperature);
+            var humidity = response.main.humidity;
+            console.log("humadity:", humidity);
+            var windSpeed = response.wind.speed;
+            console.log("windSpeed: ", windSpeed);
+            //  var uvIndex = response.
+        });
+     // 2nd Ajax call to get the UV Index data
+     // 3rd Ajax call to get five day forecast
+
+    </script>
+
+</body>
+
+</html>
