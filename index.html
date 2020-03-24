@@ -1,117 +1,29 @@
 <!DOCTYPE html>
-
 <head>
-    <title>Weather API</title>
+    <title>Weather Dashboard</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 <body>
+    <!-- Start Nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <span class="navbar-brand mb-1 h1">Weather Dashboard</span>
+    </nav>
+    <!-- End Nav -->
     <div class="container">
-        <h1>Weather Dashboard</h1>
-        <div id="buttons-view"></div>
+        <div class="row">
+            <div class="col-md-4 border">First container</div>
+            <div class="col-md-8 border">
+                <div id="currentWeather">
 
-        <!-- <form id="city-form">
-            <label for="city-input">Search for city:</label>
-            <input type="text" id="city-input"><br>
-        </form> -->
+                </div>
 
-        <div class="container">
-            <div class="contain-results">
             </div>
-            <h1></h1>
-            <div class="container-fluid">
-                <div class="row" id="rowcontainer">
-                    <div class="col-md-3 search">
-                        <form id="city-form">
-                            <label for="city-input">Search for city:</label>
-                            <input type="text" id="city-input"><br>
-                        </form>
-                        <div class="row">
-                            <div class="col previousSearch">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-9 info">
-                        <div class="row">
-                            <h2 id="cityValue">City</h2>
-                            <h2 id="currentDate">
-                                <span id="dateValue"></span>
-                                <img id="day1icon"></img>
-                            </h2>
-                        </div>
-                        <div class="row currentinforow">
-                            <p>Temperature:
-                                <span id="tempValue">
-                                </span>
-                                <br>
-                                Wind Speed: <span id="windValue">
-                                </span> <br>
-                                UV Index: <span id="uvValue">
-                                </span></p>
-                        </div>
-                        <h2>5-Day Forecast:</h2>
-                        <div class="row forecast">
-                            <div id="day2" class="forecastbox">
-                                <div id="date2"></div>
-                                <br>
-                                <img id="icon2"></img>
-                                <br>
-                                <p>Temperature: <span id="tempValue2"></span></p>
-                                <br>
-                                <p>Humidity: <span id="humidityValue2"></span></p>
-                                <br>
-                            </div>
-                            <div id="day3" class="forecastbox">
-                                <div id="date3"></div>
-                                <br>
-                                <img id="icon3"></img>
-                                <br>
-                                <p>Temperature: <span id="tempValue3"></span></p>
-                                <br>
-                                <p>Humidity: <span id="humidityValue3"> </span></p>
-                                <br>
-                            </div>
-                            <div id="day4" class="forecastbox">
-                                <div id="date4"></div>
-                                <br>
-                                <img id="icon4"></img>
-                                <br>
-                                <p>Temperature:<span id="tempValue4"></span></p>
-                                <br>
-                                <p>Humidity: <span id="humidityValue4"></span></p>
-                                <br>
-                                </p>
-                            </div>
-                            <div id="day5" class="forecastbox">
-                                <div id="date5"></div>
-                                <br>
-                                <img id="icon5"></img>
-                                <br>
-                                <p>Temperature:<span id="tempValue5"></span></p>
-                                <br>
-                                <p>Humidity: <span id="humidityValue5"></span></p>
-                                <br>
-                                </p>
-                            </div>
-                            <div id="day6" class="forecastbox">
-                                <div id="date6"></div>
-                                <br>
-                                <img id="icon6"></img>
-                                <br>
-                                <p>Temperature:<span id="tempValue6"></span></p>
-                                <br>
-                                <p>Humidity: <span id="humidityValue6"></span></p>
-                                <br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                    <script src="script.js"></script>
-
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
