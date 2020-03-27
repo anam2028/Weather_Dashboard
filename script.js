@@ -29,6 +29,7 @@ function getUV(lon, lat) {
 };
 
 
+
 var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "," + state + "&appid=" + API_Key + "&units=imperial";
 
 
@@ -45,18 +46,30 @@ $.ajax({
     console.log(response);
     var date = new Date().toLocaleDateString();
     console.log("date:", date);
+    El.append("<h1>"+date+"</h1>")
     var temperature = response.main.temp;
     console.log("temp:", temperature);
+    El.append("<h1>"+temperature+"</h1>")
     var humidity = response.main.humidity;
     console.log("humadity:", humidity);
+    El.append("<h1>"+humidity+"</h1>")
     var windSpeed = response.wind.speed;
     console.log("windSpeed: ", windSpeed);
+    El.append("<h1>"+windSpeed+"</h1>")
     //  var uvIndex = response.
     lon = response.coord.lon;
     console.log("lon: ", lon);
     lat = response.coord.lat;
     console.log("lat: ", lat);
-    getUV(lon, lat);
+    // getUV(lon, lat);
+    var queryURLuv = "http://api.openweathermap.org/data/2.5/uvi?appid=" + API_Key + "&lat=" + lat + "&lon=" + lon;
+  $.ajax({
+    url: queryURLuv,
+    method: "GET"
+  }).then(function (response){
+      console.log(response);
+      El.append("<h1>"+response.value+"</h1>")
+  });
 });
 
 
