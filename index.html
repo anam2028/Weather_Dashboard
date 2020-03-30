@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+
 <head>
     <title>Weather Dashboard</title>
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -13,11 +16,12 @@
     <!-- End Nav -->
     <div class="container">
         <div class="row">
-            <div class="col-md-4 border">First container
-            <input id='city'/>
-            <button>Search</button>
-            <br>
-        </div>
+            <div class="col-md-4 border">
+                <h6> Search for a City: </h6>
+                <input type='text' id='link_id'>
+                <input type='button' id='link_str' value='Search' onClick='link()'>
+                <br>
+            </div>
             <div class="col-md-8 border">
                 <div id="currentWeather">
 
