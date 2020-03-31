@@ -45,8 +45,6 @@ function getUV(lon, lat) {
   });
 }
 function todays_weather(cityName){
-
-
 var queryURL =
   "http://api.openweathermap.org/data/2.5/weather?q=" +
   cityName +
@@ -64,6 +62,7 @@ $.ajax({
   var El = $("<div>");
   
   // El.html(response.main.temp);
+  // clear function for current weather
   currentWeatherEl.empty();
   currentWeatherEl.append(El);
   console.log(response);
@@ -124,13 +123,11 @@ $.ajax({
     if (response.list[i].dt_txt.includes("06:00:00")) {
       console.log(response.list[i].main.temp);
       $('#forecast').append(`
-      <div class='col-md-2'>
+      <div class='col-md-2 border'>
       <h5> Temp: ${response.list[i].main.temp} </h5>
       <h5> Hum: ${response.list[i].main.humidity} </h5>
-      
-      
       </div>`)
-    
+      // forecast.empty();
     }
   }
 });
