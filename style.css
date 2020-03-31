@@ -3,11 +3,11 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: large;
-  color: blue;
+  color:blue;
 }
 
 .navbar-brand {
-  border-bottom: 2px solid rgb(85, 85, 85);
+  /* border-bottom: 2px solid rgb(85, 85, 85); */
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -15,6 +15,17 @@ body {
 }
 
 .forecast {
-  text-align: center;
-  background-color: blue;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;   
+}
+
+
+.forecastbox{
+  padding: 20px;
+  background-color: steelblue;
+  font-size: 15px;
+  font-weight: bold;
+  color: whitesmoke
+
 }

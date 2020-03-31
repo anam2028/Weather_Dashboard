@@ -69,17 +69,17 @@ $.ajax({
 
   var date = new Date().toLocaleDateString();
   console.log("date:", date);
-  El.append("<h1>" + cityName + ":" + date + "</h1>");
+  El.append("<h3>" + cityName + ":" + date + "</h3>");
   // date.textContent = "Date:";
   var temperature = response.main.temp;
   console.log("temp:", temperature);
-  El.append("<h3>Temperature: " + temperature + "</h3>");
+  El.append("<h6>Temperature: " + temperature + "</h6>");
   var humidity = response.main.humidity;
   console.log("humadity:", humidity);
-  El.append("<h3>Humadity: " + humidity + "</h3>");
+  El.append("<h6>Humadity: " + humidity + "</h6>");
   var windSpeed = response.wind.speed;
   console.log("windSpeed: ", windSpeed);
-  El.append("<h3> WindSpeed: " + windSpeed + "</h3>");
+  El.append("<h6> WindSpeed: " + windSpeed + "</h6>");
   //  var uvIndex = response.
   lon = response.coord.lon;
   console.log("lon: ", lon);
@@ -98,7 +98,7 @@ $.ajax({
     method: "GET"
   }).then(function(response) {
     console.log(response);
-    El.append("<h4>UV Index: " + response.value + "</h4>");
+    El.append("<h6>UV Index: " + response.value + "</h6>");
   });
 });
 }
@@ -123,9 +123,9 @@ $.ajax({
     if (response.list[i].dt_txt.includes("06:00:00")) {
       console.log(response.list[i].main.temp);
       $('#forecast').append(`
-      <div class='col-md-2 border'>
-      <h5> Temp: ${response.list[i].main.temp} </h5>
-      <h5> Hum: ${response.list[i].main.humidity} </h5>
+      <div class='col-md-2 border grey'>
+      <h9> Temp: ${response.list[i].main.temp} </h9>
+      <h9> Hum: ${response.list[i].main.humidity} </h9>
       </div>`)
       // forecast.empty();
     }
